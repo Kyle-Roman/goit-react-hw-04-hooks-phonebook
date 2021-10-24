@@ -3,8 +3,9 @@ import s from './ContactList.module.css';
 
 
 export default function ContactsList({contacts, onDelete}) {
-        return (
-            <ul className={s.list}>
+  return (
+    <div>
+      <ul className={s.list}>
                 {contacts.map((contact) => (
                   <li key={contact.id} className={s.list_item}>
                     <span className={s.name}>{contact.name}</span>
@@ -15,5 +16,5 @@ export default function ContactsList({contacts, onDelete}) {
                 )
                 )}
             </ul>
-        )
+    </div>)
 }
